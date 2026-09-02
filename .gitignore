@@ -1,0 +1,44 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+.idea/
+.vscode/
+.env
+.venv/
+env/
+venv/
+
+# Local datasets: keep these out of the repository.
+x0_original/
+x1/
+x8/
+x10/
+split_data_new/
+experiments_5_fold/
+public_datasets/
+
+# Caches, checkpoints, and experiment outputs.
+npy_cache/
+runs*/
+quick_runs*/
+compare_models_5fold*/
+ablation*/
+public_dataset_runs/
+task_analysis_nn_results/
+rank*_results/
+rank*_compare_models/
+training_curve*/
+multiscale_kernel_temp*/
+temp_ablation_npy_project/
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+
+# Generated reports and figures.
+*.csv
+*.json
+*.png
+*.pdf
