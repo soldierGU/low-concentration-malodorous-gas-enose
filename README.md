@@ -2,7 +2,22 @@
 
 Code release for the MS-TS-DDA model and the comparison/training scripts used in the Measurement proof stage.
 
-This repository accompanies the article **“An all-in-one electronic nose instrument for low-concentration malodorous gas measurement and classification.”** The article is currently at the proof stage; the final citation and DOI will be added after publication.
+## Associated Paper
+
+### An all-in-one electronic nose instrument for low-concentration malodorous gas measurement and classification
+
+**Authors:** Chenlong Gu<sup>a,&#42;</sup>, Qianshen Wu<sup>b</sup>, Nan Wang<sup>a</sup>, Yuxuan Zhang<sup>c,d</sup>, Sebastian Bader<sup>d</sup>, Xiaofeng Ling<sup>a</sup>, Yongjing Wan<sup>a</sup>, Daqi Gao<sup>a,&#42;</sup>
+
+<sup>a</sup> School of Information Science and Engineering, East China University of Science and Technology, Shanghai 200237, China<br>
+<sup>b</sup> ParisTech Elite Institute of Technology, Shanghai Jiao Tong University, Shanghai 200240, China<br>
+<sup>c</sup> College of Intelligent Science and Engineering, Beijing University of Agriculture, Beijing 102206, China<br>
+<sup>d</sup> Department of Computer and Electrical Engineering, Mid Sweden University, Sundsvall 85170, Sweden
+
+<sup>&#42;</sup> Corresponding authors.
+
+**Journal:** *Measurement*<br>
+**Status:** Accepted; currently in proof<br>
+**DOI:** To be added after publication
 
 This repository intentionally excludes all private training data, cached arrays, checkpoints, logs, figures, and result tables.
 
