@@ -31,6 +31,7 @@ corresponding papers should be retained when these implementations are used.
 
 ## Exclusions
 
-The root MIT License applies to original code authored for this repository.
-Third-party-derived components remain subject to their respective upstream
-copyright and license terms.
+The root PolyForm Noncommercial License 1.0.0 applies only to original code
+authored for this repository. Third-party-derived components remain subject to
+their respective upstream copyright and license terms. Nothing in the root
+license restricts rights independently granted by those upstream licenses.

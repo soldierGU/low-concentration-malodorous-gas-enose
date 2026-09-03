@@ -131,10 +131,13 @@ The scripts write outputs to ignored directories such as `ablation_*`, `compare_
 
 ## License
 
-Original code in this repository is released under the [MIT License](LICENSE).
+Original code in this repository is made available under the
+[PolyForm Noncommercial License 1.0.0](LICENSE) for noncommercial purposes
+only. Commercial use requires prior written permission from the copyright
+holder.
 
 Some comparison-model implementations are derived from or based on third-party
-research projects and may be subject to separate terms. See
+research projects and remain subject to their separate terms. See
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for details.
 
 The adapted TimeMIL implementation is not redistributed because its upstream
