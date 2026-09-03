@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated article."
+title: "MS-TS-DDA"
+type: software
+authors:
+  - family-names: Gu
+    given-names: Chenlong
+    orcid: "https://orcid.org/0009-0009-7329-0014"
+abstract: >-
+  Official code release for the MS-TS-DDA model and the comparison and
+  training scripts accompanying the associated Measurement article.
+repository-code: "https://github.com/soldierGU/low-concentration-malodorous-gas-enose"
+url: "https://github.com/soldierGU/low-concentration-malodorous-gas-enose"
+license: PolyForm-Noncommercial-1.0.0
+keywords:
+  - electronic nose
+  - gas classification
+  - deep learning
+  - domain adaptation
+  - time-series classification
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Gu
+      given-names: Chenlong
+      orcid: "https://orcid.org/0009-0009-7329-0014"
+    - family-names: Wu
+      given-names: Qianshen
+    - family-names: Wang
+      given-names: Nan
+    - family-names: Zhang
+      given-names: Yuxuan
+      orcid: "https://orcid.org/0000-0002-8617-0435"
+    - family-names: Bader
+      given-names: Sebastian
+      orcid: "https://orcid.org/0000-0002-8382-0359"
+    - family-names: Ling
+      given-names: Xiaofeng
+    - family-names: Wan
+      given-names: Yongjing
+    - family-names: Gao
+      given-names: Daqi
+  title: "An all-in-one electronic nose instrument for low-concentration malodorous gas measurement and classification"
+  journal: Measurement
+  year: 2026
+  doi: "10.1016/j.measurement.2026.122903"
+  url: "https://doi.org/10.1016/j.measurement.2026.122903"
