@@ -1,10 +1,10 @@
 # MS-TS-DDA
 
-Code release for the MS-TS-DDA model and the comparison/training scripts used in the Measurement proof stage.
+Official code release for the MS-TS-DDA model and the comparison/training scripts accompanying our article in *Measurement*.
 
 ## Associated Paper
 
-### An all-in-one electronic nose instrument for low-concentration malodorous gas measurement and classification
+### [An all-in-one electronic nose instrument for low-concentration malodorous gas measurement and classification](https://doi.org/10.1016/j.measurement.2026.122903)
 
 **Authors:** Chenlong Gu<sup>a,&#42;</sup>, Qianshen Wu<sup>b</sup>, Nan Wang<sup>a</sup>, Yuxuan Zhang<sup>c,d</sup>, Sebastian Bader<sup>d</sup>, Xiaofeng Ling<sup>a</sup>, Yongjing Wan<sup>a</sup>, Daqi Gao<sup>a,&#42;</sup>
 
@@ -16,10 +16,31 @@ Code release for the MS-TS-DDA model and the comparison/training scripts used in
 <sup>&#42;</sup> Corresponding authors.
 
 **Journal:** *Measurement*<br>
-**Status:** Accepted; currently in proof<br>
-**DOI:** To be added after publication
+**Status:** Published online<br>
+**Year:** 2026<br>
+**Article number:** 122903<br>
+**DOI:** [10.1016/j.measurement.2026.122903](https://doi.org/10.1016/j.measurement.2026.122903)<br>
+**Article page:** [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0263224126026138)
 
 This repository intentionally excludes all private training data, cached arrays, checkpoints, logs, figures, and result tables.
+
+## Citation
+
+If you use this code in your research, please cite:
+
+> Gu, C., Wu, Q., Wang, N., Zhang, Y., Bader, S., Ling, X., Wan, Y., and Gao, D. (2026). An all-in-one electronic nose instrument for low-concentration malodorous gas measurement and classification. *Measurement*, 122903. https://doi.org/10.1016/j.measurement.2026.122903
+
+```bibtex
+@article{Gu2026AllInOneENose,
+  title   = {An all-in-one electronic nose instrument for low-concentration malodorous gas measurement and classification},
+  author  = {Gu, Chenlong and Wu, Qianshen and Wang, Nan and Zhang, Yuxuan and Bader, Sebastian and Ling, Xiaofeng and Wan, Yongjing and Gao, Daqi},
+  journal = {Measurement},
+  year    = {2026},
+  pages   = {122903},
+  doi     = {10.1016/j.measurement.2026.122903},
+  url     = {https://doi.org/10.1016/j.measurement.2026.122903}
+}
+```
 
 ## Main Files
 
