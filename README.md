@@ -48,9 +48,13 @@ If you use this code in your research, please cite:
 - `train_ablation_1127.py`: 5-fold training/evaluation for the MS-TS-DDA ablation settings, including the full model setting `B5_full_AA_TSDA_DA`.
 - `train_experiment_A_1127.py`: grid search for block count `L` and `ts_rate`.
 - `train_model_compare_5fold_1127.py`: unified 5-fold training template for comparison models in `model_for_compare/`.
-- `train_mptsnet_compare_5fold.py`, `train_smellnet_compare_5fold.py`, `train_timemil_compare_5fold.py`: comparison scripts for models that need special construction or training details.
+- `train_mptsnet_compare_5fold.py`, `train_smellnet_compare_5fold.py`: comparison scripts for models that need special construction or training details.
 - `ml_baseline.py`: classical machine-learning baselines evaluated on the same prepared 5-fold split.
 - `model_for_compare/`: comparison model implementations.
+
+The TimeMIL comparison results are reported in the paper, but its adapted
+implementation is not redistributed because the upstream repository did not
+provide an explicit software license when this repository was released.
 
 ## Expected Data Layout
 
@@ -125,6 +129,14 @@ python ml_baseline.py
 
 The scripts write outputs to ignored directories such as `ablation_*`, `compare_models_5fold*`, and `npy_cache/`.
 
-## Third-Party Notice
+## License
 
-The TimeMIL comparison implementation is a local adaptation of the published architecture and public reference implementation. The upstream repository did not contain an explicit software license when checked on 2026-09-02. See [`model_for_compare/TIMEMIL_NOTICE.md`](model_for_compare/TIMEMIL_NOTICE.md) before reusing or redistributing that implementation.
+Original code in this repository is released under the [MIT License](LICENSE).
+
+Some comparison-model implementations are derived from or based on third-party
+research projects and may be subject to separate terms. See
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for details.
+
+The adapted TimeMIL implementation is not redistributed because its upstream
+repository did not provide an explicit software license at the time of this
+release.
