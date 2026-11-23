@@ -9,10 +9,8 @@ from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, recall_score
-from numpy.fft import rfft, rfftfreq
 from datetime import datetime
 from sklearn.feature_selection import SelectKBest, mutual_info_classif, SelectFromModel
-from scipy.stats import kurtosis
 from sklearn.neighbors import KNeighborsClassifier
 # ---------------- paths ----------------
 NUM_ROWS = 400
@@ -63,42 +61,21 @@ def load_flat_folder(flat_dir):
     return np.array(paths), np.array(labels)
 
 # ---------------- feature engineering ----------------
-def _band_powers(x):
-    # x: (T,)  baseline-removed
-    X = rfft(x)
-    freqs = rfftfreq(len(x), d=1.0)  # 采样间隔=1
-    psd = (X.real**2 + X.imag**2)
-    total = psd.sum() + 1e-12
-    def band(a,b):
-        m = (freqs>=a) & (freqs<b)
-        return psd[m].sum()/total
-    return np.array([band(0.0,0.05), band(0.05,0.15), band(0.15,0.5)], dtype=np.float32)
-
 def features_one_signal(s):
-    # s: (T,)
-    baseline = s[:20].mean()
-    steady   = s[-50:].mean()
-    T        = len(s)
-    ds       = np.diff(s)
-
-    # --- 特征集合 ---
-    max_val  = s.max()                         # 最大值
-    auc      = np.trapz(s)                     # 面积
-    std_all  = s.std()                         # 方差（标准差）
-    kurt     = kurtosis(s)                     # 峰度
-    max_rise = ds.max() if ds.size > 0 else 0  # 最大上升斜率
-
-    # 频带功率（去基线后更稳）
-    x  = s - baseline
-    bp = _band_powers(x)  # -> (3,)
-
-    # 合计 1+1+1+1+1+3 = 8 维
-    return np.array([max_val, kurt], dtype=np.float32)
+    """Appendix G: maximum, population variance, and Pearson kurtosis."""
+    # Input is the already baseline-corrected response for one channel.
+    s = np.asarray(s, dtype=np.float64)
+    centered = s - s.mean()
+    squared = centered ** 2
+    variance = squared.mean()
+    # Kurtosis is undefined for a constant trace; use zero as a finite fallback.
+    kurt = np.mean(squared ** 2) / variance ** 2 if variance > 0 else 0.0
+    return np.array([s.max(), variance, kurt], dtype=np.float32)
 
 def extract_features(sample_2d):
     # sample_2d: (400,16)
     feats = [features_one_signal(sample_2d[:,ch]) for ch in range(NUM_CH)]
-    return np.concatenate(feats, axis=0)  # (16 * F,)
+    return np.concatenate(feats, axis=0)  # (48,), channel-major order
 
 def build_Xy(paths, labels):
     """允许空输入：返回空数组，防止 vstack 报错"""
